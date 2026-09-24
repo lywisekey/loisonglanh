@@ -9,8 +9,8 @@ export const SITE = {
   motto: "Ăn lành · Sống lành · Tập lành · Ngủ lành",
   /* Cách vận hành, không phải địa chỉ liên hệ — nên đặt ở khối thương hiệu. */
   location: "Làm việc từ xa — phục vụ khách hàng toàn cầu",
-  /** Đổi thành domain thật sau khi deploy để sitemap/OG dùng URL tuyệt đối. */
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://loi-song-lanh.vercel.app",
+  /** Domain thật của trang; ghi đè được bằng NEXT_PUBLIC_SITE_URL. */
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://loisonglanh.boncolia.com",
   showYoutubeLink: true,
 };
 

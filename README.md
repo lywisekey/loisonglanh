@@ -51,7 +51,7 @@ Hiện mỗi bài dùng khung ảnh gợi ý bố cục (`photoHint`). Để dù
 2. Vercel → **New Project** → chọn repo. Vercel tự nhận Next.js, không cần chỉnh
    build command hay output directory.
 3. Thêm biến môi trường `NEXT_PUBLIC_SITE_URL` = domain thật
-   (ví dụ `https://loisonglanh.vn`) để sitemap, canonical và thẻ OG dùng URL đúng.
+   (ví dụ `https://loisonglanh.boncolia.com`) để sitemap, canonical và thẻ OG dùng URL đúng.
 4. Deploy.
 
 Hoặc dùng CLI:
