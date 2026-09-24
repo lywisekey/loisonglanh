@@ -44,4 +44,9 @@ export const ICON_SPROUT = [
   "M12 11C7 11 5 8 5 5c3 0 7 2 7 6 0-4 4-6 7-6 0 3-2 6-7 6Z",
 ];
 export const ICON_PHONE_OFF = ["M9 3h6v18H9V3Z", "M4 4l16 16"];
+export const ICON_PHONE =
+  "M6.5 3h3.2l1.8 4.6-2.3 1.4a12.5 12.5 0 0 0 5.8 5.8l1.4-2.3L21 14.3v3.2a2.5 2.5 0 0 1-2.5 2.5A15.5 15.5 0 0 1 4 5.5 2.5 2.5 0 0 1 6.5 3Z";
+export const ICON_MAIL = ["M3 6h18v12H3V6Z", "M3.6 6.6L12 13l8.4-6.4"];
+export const ICON_CHAT = "M4 5h16a1.5 1.5 0 0 1 1.5 1.5v8A1.5 1.5 0 0 1 20 16H9.5L4.5 20V6.5A1.5 1.5 0 0 1 6 5Z";
+export const ICON_PIN = ["M12 21.5s7-6.6 7-11.5a7 7 0 1 0-14 0c0 4.9 7 11.5 7 11.5Z", "M12 12.6a2.6 2.6 0 1 0 0-5.2 2.6 2.6 0 0 0 0 5.2Z"];
 export const ICON_BED = ["M3 18v-8h12a5 5 0 0 1 5 5v3", "M3 14h17", "M3 18V6"];

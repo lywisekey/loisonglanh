@@ -444,6 +444,35 @@ export const KEYWORDS = [
   "vệ sinh cá nhân",
 ];
 
+export type ContactItem = {
+  label: string;
+  value: string;
+  /** Có thì mục thành liên kết bấm được (gọi, gửi mail). */
+  href?: string;
+  icon: "phone" | "chat" | "mail" | "pin";
+};
+
+export const CONTACT: ContactItem[] = [
+  {
+    label: "Điện thoại",
+    value: "+84 (0) 338 546 468",
+    href: "tel:+84338546468",
+    icon: "phone",
+  },
+  { label: "Zalo / WhatsApp", value: "+84 (0) 338 546 468", icon: "chat" },
+  {
+    label: "Email",
+    value: "greenlabs80@gmail.com",
+    href: "mailto:greenlabs80@gmail.com",
+    icon: "mail",
+  },
+  {
+    label: "Địa chỉ",
+    value: "Làm việc từ xa — phục vụ khách hàng toàn cầu",
+    icon: "pin",
+  },
+];
+
 export const PRINCIPLES: { no: string; text: string; icon: IconName }[] = [
   { no: "01", text: "Ăn đơn giản", icon: "bowl" },
   { no: "02", text: "Vận động đều", icon: "pulse" },
