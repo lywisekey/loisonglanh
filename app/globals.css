@@ -509,3 +509,20 @@ a.site-contact-item:hover .site-contact-icon {
 a.site-contact-item:hover .site-contact-value {
   color: var(--lg-honey-300);
 }
+
+/* Dòng "làm việc từ xa" nằm trong khối thương hiệu, không phải mục liên hệ. */
+.site-footer-location {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  margin: 12px 0 0;
+  max-width: 40ch;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-neutral-400);
+}
+.site-footer-location svg {
+  flex: none;
+  margin-top: 3px;
+  color: var(--lg-honey-300);
+}

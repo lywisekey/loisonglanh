@@ -7,6 +7,8 @@ export const SITE = {
   description:
     "Những kinh nghiệm giản dị về ăn uống, vận động, giấc ngủ và chăm sóc cơ thể. Nội dung mang tính chia sẻ và tham khảo, không thay thế tư vấn của bác sĩ.",
   motto: "Ăn lành · Sống lành · Tập lành · Ngủ lành",
+  /* Cách vận hành, không phải địa chỉ liên hệ — nên đặt ở khối thương hiệu. */
+  location: "Làm việc từ xa — phục vụ khách hàng toàn cầu",
   /** Đổi thành domain thật sau khi deploy để sitemap/OG dùng URL tuyệt đối. */
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://loi-song-lanh.vercel.app",
   showYoutubeLink: true,
@@ -465,11 +467,6 @@ export const CONTACT: ContactItem[] = [
     value: "greenlabs80@gmail.com",
     href: "mailto:greenlabs80@gmail.com",
     icon: "mail",
-  },
-  {
-    label: "Địa chỉ",
-    value: "Làm việc từ xa — phục vụ khách hàng toàn cầu",
-    icon: "pin",
   },
 ];
 

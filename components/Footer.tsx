@@ -42,6 +42,10 @@ export function Footer() {
             <span>{SITE.brand}</span>
           </Link>
           <p className="site-footer-tagline">{SITE.tagline}</p>
+          <p className="site-footer-location">
+            <Icon d={ICON_PIN} size={19} />
+            <span>{SITE.location}</span>
+          </p>
           <p className="site-footer-motto">{SITE.motto}</p>
         </div>
 
