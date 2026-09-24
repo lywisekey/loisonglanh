@@ -12,11 +12,11 @@ import {
   ICON_WARN,
 } from "./Icon";
 import { Logo } from "./Logo";
+import { Spot } from "./illustrations/spots";
 import {
   articleHref,
   catName,
   CATS,
-  iconPath,
   KEYWORDS,
   NAV,
   searchArticles,
@@ -225,7 +225,7 @@ export function Header() {
                     }}
                   >
                     <span className="icon-badge icon-badge-green">
-                      <Icon d={iconPath(r.icon)} size={24} />
+                      <Spot name={r.icon} size={30} />
                     </span>
                     <span style={{ display: "flex", flexDirection: "column", gap: 2, minWidth: 0 }}>
                       <span
@@ -296,8 +296,8 @@ export function Header() {
                   minHeight: 60,
                 }}
               >
-                <span className="icon-badge icon-badge-green" style={{ width: 44, height: 44 }}>
-                  <Icon d={cat ? iconPath(cat.icon) : ICON_WARN} size={23} />
+                <span className="icon-badge icon-badge-green" style={{ width: 48, height: 48 }}>
+                  {cat ? <Spot name={cat.icon} size={30} /> : <Icon d={ICON_WARN} size={24} />}
                 </span>
                 <span style={{ marginRight: "auto" }}>{n.label}</span>
                 <Icon d={ICON_CHEVRON} size={20} stroke="var(--color-accent)" />

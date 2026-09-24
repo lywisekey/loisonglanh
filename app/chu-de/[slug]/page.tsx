@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArticleCard } from "@/components/ArticleCard";
-import { Icon } from "@/components/Icon";
-import { byCat, CATS, catHref, getCat, iconPath, SITE } from "@/lib/content";
+import { Spot } from "@/components/illustrations/spots";
+import { byCat, CATS, catHref, getCat, SITE } from "@/lib/content";
 
 type Params = { params: Promise<{ slug: string }> };
 
@@ -47,7 +47,7 @@ export default async function CategoryPage({ params }: Params) {
 
       <div style={{ display: "flex", alignItems: "center", gap: 18, flexWrap: "wrap" }}>
         <span className="icon-badge icon-badge-green" style={{ width: 74, height: 74 }}>
-          <Icon d={iconPath(cat.icon)} size={38} />
+          <Spot name={cat.icon} size={46} />
         </span>
         <h1 style={{ fontSize: "clamp(32px,5vw,50px)", margin: 0 }}>{cat.name}</h1>
       </div>

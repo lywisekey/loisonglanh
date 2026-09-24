@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Icon, ICON_WARN } from "./Icon";
-import { articleHref, catName, iconPath, type Article } from "@/lib/content";
+import { Spot } from "./illustrations/spots";
+import { articleHref, catName, type Article } from "@/lib/content";
 
 /** Thẻ bài viết chuẩn: huy hiệu icon, tên, trích dẫn, nhãn phụ tùy nội dung. */
 export function ArticleCard({
@@ -25,8 +26,8 @@ export function ArticleCard({
     >
       {variant === "group" ? (
         <span style={{ display: "flex", alignItems: "center", gap: 10 }}>
-          <span className="icon-badge icon-badge-green" style={{ width: 40, height: 40 }}>
-            <Icon d={iconPath(a.icon)} size={21} />
+          <span className="icon-badge icon-badge-green" style={{ width: 52, height: 52 }}>
+            <Spot name={a.icon} size={32} />
           </span>
           <span
             style={{
@@ -41,7 +42,7 @@ export function ArticleCard({
         </span>
       ) : (
         <span className="icon-badge">
-          <Icon d={iconPath(a.icon)} size={23} />
+          <Spot name={a.icon} size={31} />
         </span>
       )}
 

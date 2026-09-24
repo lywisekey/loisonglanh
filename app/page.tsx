@@ -1,9 +1,10 @@
 import Link from "next/link";
 import { ArticleCard } from "@/components/ArticleCard";
 import { SectionHeading } from "@/components/SectionHeading";
-import { Icon, ICON_BED, ICON_PHONE_OFF, ICON_PLAY, ICON_WARN } from "@/components/Icon";
+import { Icon, ICON_PLAY, ICON_WARN } from "@/components/Icon";
 import { PhotoSlot } from "@/components/PhotoSlot";
-import { IC, IC_UI } from "@/lib/icons";
+import { IC_UI } from "@/lib/icons";
+import { Spot } from "@/components/illustrations/spots";
 import {
   articleHref,
   byCat,
@@ -11,7 +12,6 @@ import {
   DISCLAIMER,
   getArticle,
   getCat,
-  iconPath,
   pickArticles,
   PRINCIPLES,
   SITE,
@@ -106,8 +106,8 @@ export default function HomePage() {
         <div className="grid-auto" style={{ ["--min" as string]: "230px" }}>
           {catCards.map((c) => (
             <Link key={c.id} href={catHref(c.id)} className="card card-link elev-sm" style={{ padding: 24, gap: 12 }}>
-              <span className="icon-badge" style={{ width: 48, height: 48 }}>
-                <Icon d={iconPath(c.icon)} size={24} />
+              <span className="icon-badge" style={{ width: 58, height: 58 }}>
+                <Spot name={c.icon} size={34} />
               </span>
               <span
                 style={{
@@ -130,7 +130,7 @@ export default function HomePage() {
       {/* ── Vận động ───────────────────────────────────────────────────── */}
       <section className="wrap" style={{ padding: "clamp(30px,5vw,64px) 20px" }}>
         <SectionHeading
-          icon={IC.pulse}
+          spot="pulse"
           title="Vận động mỗi ngày"
           lead="Không nhất thiết phải tập luyện quá nặng. Điều quan trọng là duy trì vận động đều đặn và tạo thành thói quen."
         />
@@ -238,7 +238,7 @@ export default function HomePage() {
       <section style={{ background: "var(--color-band-warm)", padding: "clamp(34px,5vw,72px) 0" }}>
         <div className="wrap">
           <SectionHeading
-            icon={IC.droplet}
+            spot="droplet"
             tone="green"
             title="Vệ sinh cá nhân – đơn giản và tự nhiên"
             lead="Những thói quen chăm sóc cơ thể theo hướng đơn giản, tự nhiên — được chia sẻ để tham khảo."
@@ -253,7 +253,7 @@ export default function HomePage() {
 
       {/* ── Giấc ngủ ───────────────────────────────────────────────────── */}
       <section className="wrap" style={{ padding: "clamp(34px,5vw,68px) 20px" }}>
-        <SectionHeading icon={IC.moon} tone="green" title="Ngủ sớm – thức dậy sớm" />
+        <SectionHeading spot="moon" tone="green" title="Ngủ sớm – thức dậy sớm" />
         <div
           className="grid-auto"
           style={{ ["--min" as string]: "280px", ["--gap" as string]: "18px", alignItems: "start" }}
@@ -282,7 +282,7 @@ export default function HomePage() {
                 placeItems: "center",
               }}
             >
-              <Icon d={iconPath(sleep.icon)} size={24} />
+              <Spot name={sleep.icon} size={30} />
             </span>
             <span
               style={{
@@ -309,11 +309,11 @@ export default function HomePage() {
             style={{ padding: "clamp(24px,3vw,34px)", gap: 14 }}
           >
             <span style={{ display: "flex", gap: 10 }}>
-              <span className="icon-badge" style={{ width: 44, height: 44 }}>
-                <Icon d={ICON_PHONE_OFF} size={22} />
+              <span className="icon-badge" style={{ width: 52, height: 52 }}>
+                <Spot name="phoneOff" size={30} />
               </span>
-              <span className="icon-badge icon-badge-green" style={{ width: 44, height: 44 }}>
-                <Icon d={ICON_BED} size={22} />
+              <span className="icon-badge icon-badge-green" style={{ width: 52, height: 52 }}>
+                <Spot name="bed" size={30} />
               </span>
             </span>
             <span
@@ -340,7 +340,7 @@ export default function HomePage() {
       <section style={{ background: "var(--color-band-sand)", padding: "clamp(34px,5vw,72px) 0" }}>
         <div className="wrap">
           <SectionHeading
-            icon={IC.bowl}
+            spot="bowl"
             title="Ăn uống – lựa chọn thực phẩm đơn giản"
             lead="Những nguyên tắc dưới đây là kinh nghiệm ăn uống được chia sẻ. Không phải chế độ ăn bắt buộc cho tất cả mọi người."
           />
@@ -355,7 +355,7 @@ export default function HomePage() {
       {/* ── Thức uống ──────────────────────────────────────────────────── */}
       <section className="wrap" style={{ padding: "clamp(34px,5vw,68px) 20px" }}>
         <SectionHeading
-          icon={IC.cup}
+          spot="cup"
           tone="green"
           title="Những thức uống được chia sẻ"
           lead="Các thức uống quen thuộc, dễ chuẩn bị tại nhà."
@@ -371,7 +371,7 @@ export default function HomePage() {
       <section style={{ background: "var(--color-accent-2-100)", padding: "clamp(34px,5vw,72px) 0" }}>
         <div className="wrap">
           <SectionHeading
-            icon={IC.jar}
+            spot="jar"
             title="Ngâm uống lâu dài"
             lead="Một số cách ngâm nguyên liệu được chia sẻ dưới đây. Đây là phần kinh nghiệm tham khảo, không phải hướng dẫn điều trị bệnh."
           />
@@ -441,7 +441,7 @@ export default function HomePage() {
 
       {/* ── Nguyên tắc ─────────────────────────────────────────────────── */}
       <section id="nguyen-tac" className="wrap" style={{ padding: "clamp(34px,5vw,72px) 20px" }}>
-        <SectionHeading icon={IC.sprout} title="Không cần quá phức tạp" />
+        <SectionHeading spot="sprout" title="Không cần quá phức tạp" />
         <div className="grid-auto" style={{ ["--min" as string]: "200px" }}>
           {PRINCIPLES.map((p) => (
             <div
@@ -456,8 +456,8 @@ export default function HomePage() {
               }}
             >
               <span style={{ display: "flex", alignItems: "center", gap: 12 }}>
-                <span className="icon-badge icon-badge-green" style={{ width: 52, height: 52 }}>
-                  <Icon d={iconPath(p.icon)} size={27} />
+                <span className="icon-badge icon-badge-green" style={{ width: 54, height: 54 }}>
+                  <Spot name={p.icon} size={32} />
                 </span>
                 <span
                   style={{
