@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { hasScene, Illustration } from "./illustrations/scenes";
 
 const SPROUT = "M12 21V11M12 11C7 11 5 8 5 5c3 0 7 2 7 6 0-4 4-6 7-6 0 3-2 6-7 6Z";
 
@@ -10,6 +11,7 @@ const SPROUT = "M12 21V11M12 11C7 11 5 8 5 5c3 0 7 2 7 6 0-4 4-6 7-6 0 3-2 6-7 6
 export function PhotoSlot({
   src,
   hint,
+  id,
   icon,
   ratio = "4 / 3",
   radius = 32,
@@ -17,6 +19,8 @@ export function PhotoSlot({
 }: {
   src?: string;
   hint: string;
+  /** Mã bài; nếu có tranh minh hoạ tương ứng thì dùng tranh đó. */
+  id?: string;
   /** Biểu tượng hiện trong khung khi chưa có ảnh thật; mặc định là mầm cây. */
   icon?: string | string[];
   ratio?: string;
@@ -24,10 +28,12 @@ export function PhotoSlot({
   priority?: boolean;
 }) {
   const alt = hint.replace(/^Ảnh:\s*/i, "");
+  const drawn = !src && !!id && hasScene(id);
 
   return (
     <div
-      className="washed"
+      /* .washed làm nhạt màu, chỉ hợp với ảnh chụp — tranh vẽ giữ nguyên màu. */
+      className={drawn ? undefined : "washed"}
       style={{
         position: "relative",
         borderRadius: radius,
@@ -46,6 +52,8 @@ export function PhotoSlot({
           sizes="(max-width: 860px) 100vw, 560px"
           style={{ objectFit: "cover" }}
         />
+      ) : drawn ? (
+        <Illustration id={id!} alt={alt} />
       ) : (
         <Placeholder hint={hint} icon={icon} />
       )}

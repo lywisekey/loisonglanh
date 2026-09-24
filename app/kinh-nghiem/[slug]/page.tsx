@@ -106,7 +106,7 @@ export default async function ArticlePage({ params }: Params) {
         {a.excerpt}
       </p>
 
-      <PhotoSlot hint={a.photoHint} icon={iconPath(a.icon)} ratio="16 / 9" radius={28} priority />
+      <PhotoSlot id={a.id} hint={a.photoHint} icon={iconPath(a.icon)} ratio="16 / 9" radius={28} priority />
 
       <div style={{ marginTop: 34 }}>
         <SectionHeading icon={IC_UI.summary} title="Tóm tắt" size="md" tone="green" />

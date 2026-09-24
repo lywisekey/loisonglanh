@@ -94,7 +94,7 @@ export default function HomePage() {
         </div>
 
         <div style={{ flex: "1 1 320px", minWidth: 0 }}>
-          <PhotoSlot hint={HERO_HINT} ratio="4 / 3" radius={32} priority />
+          <PhotoSlot id="hero" hint={HERO_HINT} ratio="4 / 3" radius={32} priority />
           <p style={{ fontSize: 13.5, color: "var(--color-neutral-700)", margin: "10px 4px 0" }}>
             Một bàn gỗ mộc: chén chè xanh, chanh, gừng, mật ong, các loại đậu và rau củ.
           </p>
