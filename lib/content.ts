@@ -14,6 +14,15 @@ export const SITE = {
   showYoutubeLink: true,
 };
 
+/**
+ * Mã đo lường Google Analytics 4.
+ *
+ * Mã này vốn công khai (ai xem mã nguồn trang cũng thấy) nên để thẳng ở đây,
+ * nhưng vẫn cho phép ghi đè bằng biến môi trường để bản xem thử dùng mã khác
+ * hoặc tắt hẳn (đặt NEXT_PUBLIC_GA_ID rỗng).
+ */
+export const GA_ID = process.env.NEXT_PUBLIC_GA_ID ?? "G-LCSRDDFP1M";
+
 export const YOUTUBE_SEARCH =
   "https://www.youtube.com/results?search_query=v%E1%BA%A9y+tay+d%E1%BB%8Bch+c%C3%A2n+kinh+h%C6%B0%E1%BB%9Bng+d%E1%BA%ABn";
 

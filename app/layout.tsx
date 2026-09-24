@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Be_Vietnam_Pro, Lora } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@/components/Analytics";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SITE } from "@/lib/content";
@@ -73,6 +74,7 @@ export default function RootLayout({
           <div style={{ flex: 1 }}>{children}</div>
           <Footer />
         </div>
+        <Analytics />
       </body>
     </html>
   );

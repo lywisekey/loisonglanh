@@ -75,3 +75,14 @@ npm run build       # dựng bản production
 ```
 
 > Next 16 đã gỡ lệnh `next lint`, nên dự án dùng `tsc --noEmit` thay cho script `lint` cũ.
+
+## Google Analytics
+
+Mã đo lường GA4 nằm ở `GA_ID` trong `lib/content.ts`, ghi đè được bằng biến
+môi trường `NEXT_PUBLIC_GA_ID`.
+
+- Chỉ chạy ở bản dựng production; `npm run dev` không gửi dữ liệu.
+- Để tắt trên bản xem thử của Vercel: đặt `NEXT_PUBLIC_GA_ID` rỗng cho
+  môi trường Preview.
+- `page_view` do ứng dụng tự gửi mỗi khi đổi đường dẫn, không dựa vào mục
+  "Enhanced measurement" của GA4.
