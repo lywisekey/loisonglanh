@@ -66,3 +66,12 @@ npx vercel --prod   # deploy production
 Trang là kênh chia sẻ kinh nghiệm cá nhân và kinh nghiệm dân gian, không phải tư vấn
 y tế. Phần `DISCLAIMER` xuất hiện ở trang chủ, trang `/luu-y` và cuối mỗi bài — nên
 giữ nguyên khi thêm nội dung mới.
+
+## Kiểm tra
+
+```bash
+npm run typecheck   # kiểm kiểu TypeScript
+npm run build       # dựng bản production
+```
+
+> Next 16 đã gỡ lệnh `next lint`, nên dự án dùng `tsc --noEmit` thay cho script `lint` cũ.
